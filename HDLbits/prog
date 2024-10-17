@@ -1,0 +1,158 @@
+#! /usr/bin/vvp
+:ivl_version "11.0 (stable)";
+:ivl_delay_selection "TYPICAL";
+:vpi_time_precision - 9;
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/system.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_sys.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/vhdl_textio.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/v2005_math.vpi";
+:vpi_module "/usr/lib/x86_64-linux-gnu/ivl/va_math.vpi";
+S_0x557715932260 .scope module, "my_dff8_tb" "my_dff8_tb" 2 4;
+ .timescale -9 -9;
+v0x55771594a0c0_0 .var "clk", 0 0;
+v0x55771594a190_0 .var "d", 7 0;
+v0x55771594a260_0 .net "q", 7 0, v0x557715949f80_0;  1 drivers
+S_0x5577158f5cf0 .scope module, "UUT" "my_dff8" 2 10, 3 17 0, S_0x557715932260;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 8 "d";
+    .port_info 2 /OUTPUT 8 "q";
+v0x5577159209b0_0 .net "clk", 0 0, v0x55771594a0c0_0;  1 drivers
+v0x557715920550_0 .net "d", 7 0, v0x55771594a190_0;  1 drivers
+v0x557715949f80_0 .var "q", 7 0;
+E_0x5577159317c0 .event posedge, v0x5577159209b0_0;
+S_0x5577159323f0 .scope module, "top_module" "top_module" 3 1;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 8 "d";
+    .port_info 2 /INPUT 2 "sel";
+    .port_info 3 /OUTPUT 8 "q";
+v0x55771594b3a0_0 .net *"_ivl_1", 0 0, L_0x55771594bfc0;  1 drivers
+v0x55771594b480_0 .net *"_ivl_3", 0 0, L_0x55771594c090;  1 drivers
+v0x55771594b560_0 .net *"_ivl_4", 7 0, L_0x55771594c1b0;  1 drivers
+v0x55771594b650_0 .net *"_ivl_7", 0 0, L_0x55771594c2f0;  1 drivers
+v0x55771594b730_0 .net *"_ivl_8", 7 0, L_0x55771594c3c0;  1 drivers
+o0x7f1df4bf9138 .functor BUFZ 1, C4<z>; HiZ drive
+v0x55771594b860_0 .net "clk", 0 0, o0x7f1df4bf9138;  0 drivers
+o0x7f1df4bf9168 .functor BUFZ 8, C4<zzzzzzzz>; HiZ drive
+v0x55771594b900_0 .net "d", 7 0, o0x7f1df4bf9168;  0 drivers
+v0x55771594b9c0_0 .net "q", 7 0, L_0x55771594c4b0;  1 drivers
+o0x7f1df4bf94f8 .functor BUFZ 2, C4<zz>; HiZ drive
+v0x55771594ba80_0 .net "sel", 1 0, o0x7f1df4bf94f8;  0 drivers
+o0x7f1df4bf9528 .functor BUFZ 8, C4<zzzzzzzz>; HiZ drive
+v0x55771594bbf0_0 .net "w0", 7 0, o0x7f1df4bf9528;  0 drivers
+v0x55771594bcd0_0 .net "w1", 7 0, v0x55771594a790_0;  1 drivers
+v0x55771594bd90_0 .net "w2", 7 0, v0x55771594acf0_0;  1 drivers
+v0x55771594bea0_0 .net "w3", 7 0, v0x55771594b250_0;  1 drivers
+L_0x55771594bfc0 .part o0x7f1df4bf94f8, 1, 1;
+L_0x55771594c090 .part o0x7f1df4bf94f8, 0, 1;
+L_0x55771594c1b0 .functor MUXZ 8, v0x55771594acf0_0, v0x55771594b250_0, L_0x55771594c090, C4<>;
+L_0x55771594c2f0 .part o0x7f1df4bf94f8, 0, 1;
+L_0x55771594c3c0 .functor MUXZ 8, o0x7f1df4bf9528, v0x55771594a790_0, L_0x55771594c2f0, C4<>;
+L_0x55771594c4b0 .functor MUXZ 8, L_0x55771594c3c0, L_0x55771594c1b0, L_0x55771594bfc0, C4<>;
+S_0x55771594a360 .scope module, "u0" "my_dff8" 3 9, 3 17 0, S_0x5577159323f0;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 8 "d";
+    .port_info 2 /OUTPUT 8 "q";
+v0x55771594a5d0_0 .net "clk", 0 0, o0x7f1df4bf9138;  alias, 0 drivers
+v0x55771594a6b0_0 .net "d", 7 0, o0x7f1df4bf9168;  alias, 0 drivers
+v0x55771594a790_0 .var "q", 7 0;
+E_0x557715931ab0 .event posedge, v0x55771594a5d0_0;
+S_0x55771594a900 .scope module, "u1" "my_dff8" 3 10, 3 17 0, S_0x5577159323f0;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 8 "d";
+    .port_info 2 /OUTPUT 8 "q";
+v0x55771594ab30_0 .net "clk", 0 0, o0x7f1df4bf9138;  alias, 0 drivers
+v0x55771594ac20_0 .net "d", 7 0, v0x55771594a790_0;  alias, 1 drivers
+v0x55771594acf0_0 .var "q", 7 0;
+S_0x55771594ae40 .scope module, "u2" "my_dff8" 3 11, 3 17 0, S_0x5577159323f0;
+ .timescale -9 -9;
+    .port_info 0 /INPUT 1 "clk";
+    .port_info 1 /INPUT 8 "d";
+    .port_info 2 /OUTPUT 8 "q";
+v0x55771594b0a0_0 .net "clk", 0 0, o0x7f1df4bf9138;  alias, 0 drivers
+v0x55771594b190_0 .net "d", 7 0, v0x55771594acf0_0;  alias, 1 drivers
+v0x55771594b250_0 .var "q", 7 0;
+    .scope S_0x5577158f5cf0;
+T_0 ;
+    %wait E_0x5577159317c0;
+    %load/vec4 v0x557715920550_0;
+    %store/vec4 v0x557715949f80_0, 0, 8;
+    %jmp T_0;
+    .thread T_0;
+    .scope S_0x557715932260;
+T_1 ;
+    %pushi/vec4 0, 0, 8;
+    %store/vec4 v0x55771594a190_0, 0, 8;
+    %pushi/vec4 0, 0, 1;
+    %store/vec4 v0x55771594a0c0_0, 0, 1;
+    %end;
+    .thread T_1;
+    .scope S_0x557715932260;
+T_2 ;
+    %load/vec4 v0x55771594a0c0_0;
+    %inv;
+    %store/vec4 v0x55771594a0c0_0, 0, 1;
+    %delay 10, 0;
+    %jmp T_2;
+    .thread T_2;
+    .scope S_0x557715932260;
+T_3 ;
+    %vpi_call 2 18 "$dumpfile", "./my_dff8_tb.vcd" {0 0 0};
+    %vpi_call 2 19 "$dumpvars", 32'sb00000000000000000000000000000000, S_0x557715932260 {0 0 0};
+    %pushi/vec4 0, 0, 8;
+    %store/vec4 v0x55771594a190_0, 0, 8;
+    %delay 45, 0;
+    %pushi/vec4 2, 0, 8;
+    %store/vec4 v0x55771594a190_0, 0, 8;
+    %delay 45, 0;
+    %pushi/vec4 3, 0, 8;
+    %store/vec4 v0x55771594a190_0, 0, 8;
+    %delay 45, 0;
+    %pushi/vec4 1, 0, 8;
+    %store/vec4 v0x55771594a190_0, 0, 8;
+    %delay 45, 0;
+    %pushi/vec4 4, 0, 8;
+    %store/vec4 v0x55771594a190_0, 0, 8;
+    %delay 45, 0;
+    %pushi/vec4 5, 0, 8;
+    %store/vec4 v0x55771594a190_0, 0, 8;
+    %delay 45, 0;
+    %pushi/vec4 6, 0, 8;
+    %store/vec4 v0x55771594a190_0, 0, 8;
+    %delay 45, 0;
+    %pushi/vec4 7, 0, 8;
+    %store/vec4 v0x55771594a190_0, 0, 8;
+    %delay 45, 0;
+    %vpi_call 2 29 "$finish" {0 0 0};
+    %end;
+    .thread T_3;
+    .scope S_0x55771594a360;
+T_4 ;
+    %wait E_0x557715931ab0;
+    %load/vec4 v0x55771594a6b0_0;
+    %store/vec4 v0x55771594a790_0, 0, 8;
+    %jmp T_4;
+    .thread T_4;
+    .scope S_0x55771594a900;
+T_5 ;
+    %wait E_0x557715931ab0;
+    %load/vec4 v0x55771594ac20_0;
+    %store/vec4 v0x55771594acf0_0, 0, 8;
+    %jmp T_5;
+    .thread T_5;
+    .scope S_0x55771594ae40;
+T_6 ;
+    %wait E_0x557715931ab0;
+    %load/vec4 v0x55771594b190_0;
+    %store/vec4 v0x55771594b250_0, 0, 8;
+    %jmp T_6;
+    .thread T_6;
+# The file index is used to find the file name in the following table.
+:file_names 4;
+    "N/A";
+    "<interactive>";
+    "my_dff8_tb.v";
+    "./my_dff8.v";

@@ -1,0 +1,63 @@
+$date
+	Thu Oct 17 00:10:13 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	1ns
+$end
+$scope module testbench $end
+$var wire 1 ! up $end
+$var wire 1 " right $end
+$var wire 1 # left $end
+$var wire 1 $ down $end
+$var reg 16 % scancode [15:0] $end
+$scope module UUT $end
+$var wire 16 & scancode [15:0] $end
+$var reg 1 $ down $end
+$var reg 1 # left $end
+$var reg 1 " right $end
+$var reg 1 ! up $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+b0 &
+b0 %
+0$
+0#
+0"
+0!
+$end
+#20
+b1 %
+b1 &
+#40
+1!
+b1110000001110101 %
+b1110000001110101 &
+#60
+1#
+b1110000001101011 %
+b1110000001101011 &
+#80
+0!
+0#
+b1110000001101100 %
+b1110000001101100 &
+#100
+1$
+b1110000001110010 %
+b1110000001110010 &
+#120
+1"
+b1110000001110100 %
+b1110000001110100 &
+#140
+0$
+0"
+b1110000001110110 %
+b1110000001110110 &
+#160
