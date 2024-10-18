@@ -1,0 +1,119 @@
+$date
+	Fri Oct 18 16:36:20 2024
+$end
+$version
+	Icarus Verilog
+$end
+$timescale
+	100ps
+$end
+$scope module tb_pair_detector $end
+$var wire 1 ! detect $end
+$var reg 1 " clk $end
+$var reg 1 # in $end
+$var reg 1 $ rst $end
+$scope module UUT $end
+$var wire 1 " clk $end
+$var wire 1 # in $end
+$var wire 1 $ reset $end
+$var reg 1 ! detect $end
+$var reg 2 % state [1:0] $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+bx %
+0$
+0#
+0"
+x!
+$end
+#1000
+0!
+1"
+#2000
+0"
+1#
+#3000
+1"
+#4000
+0"
+0#
+#5000
+1"
+#6000
+0"
+1#
+#7000
+1"
+#8000
+0"
+0#
+#9000
+1"
+#10000
+0"
+1#
+#11000
+1"
+#12000
+0"
+0#
+#13000
+1"
+#14000
+0"
+1#
+#15000
+1"
+#16000
+0"
+0#
+#17000
+1"
+#18000
+0"
+1#
+#19000
+1"
+#20000
+0"
+#21000
+1"
+#22000
+0"
+0#
+#23000
+1"
+#24000
+0"
+1#
+#25000
+1"
+#26000
+0"
+0#
+#27000
+1"
+#28000
+0"
+1#
+#29000
+1"
+#30000
+0"
+0#
+#31000
+1"
+#32000
+0"
+#33000
+1"
+#34000
+0"
+#35000
+1"
+#36000
+0"
+1#
