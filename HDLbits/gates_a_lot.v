@@ -37,3 +37,5 @@ module module2(
 	assign out_different = in ^ {in[0], in[3:1]};
 
 endmodule
+
+    

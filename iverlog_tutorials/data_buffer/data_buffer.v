@@ -1,7 +1,7 @@
 module data_buffer(
     input clk, last_data_packet,
-    input [7:0] a, b,
-    output [7:0] z, 
+    input [7:0] data_pkt,
+    output [7:0] data_buf, 
 );
 
     event recieved_data;
@@ -13,10 +13,7 @@ module data_buffer(
     end
 
     always @(recieved_data) begin
-        
-        // shit to be done.
-
+        data_buf = {data_pkt[0], data_pkt[1], data_pkt[2], data_pkt[3]};
     end
-
     
 endmodule

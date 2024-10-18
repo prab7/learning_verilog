@@ -1,3 +1,9 @@
+// Block assignments are sequential 
+// non-Blocking assignments are parallel (YOU THOUGHT!!)
+
+// blocking -> immediate assignments
+// non-blocking => deferred assignments
+
 module combn_block_nonblock (
     input a, b, c,
     output x
@@ -13,17 +19,12 @@ module combn_block_nonblock (
 
         x <= a;     // okay, next
         x <= x ^ b;  // okay, ditch the last. next
-        x <= x | c;  // cool, ditch the last
+        x <= x | c;  // cool, ditch the last (latch inferred)
 
-        // produces x = x | c; without a latch. nonsense circuit.
+        // produces x = x | c;  (latch inferred)
         // order doesnt matter
 
     end
 
 endmodule
 
-// Block assignments are sequential 
-// non-Blocking assignments are parallel (YOU THOUGHT!!)
-
-// blocking -> immediate assignments
-// non-blocking => deferred assignments
